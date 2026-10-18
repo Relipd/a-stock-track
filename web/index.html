@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>五链投研台 · 月度人工分析</title>
+<meta name="description" content="五条产业链（白电 / 光伏 / 汽车 / 铜下游 / 酒店旅游）共 200 只标的的月度人工投研工作台：总览、产业链、标的活文档、月度体检。无模型调用。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23e6e4df'/%3E%3Crect x='6' y='7' width='5' height='18' fill='%2326251e'/%3E%3Crect x='14' y='7' width='5' height='18' fill='%2326251e'/%3E%3Crect x='22' y='7' width='5' height='18' fill='%232456d6'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./styles.css?v=20261018e">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="#/overview">五链投研台</a>
+
+    <nav class="mainnav" aria-label="主导航">
+      <a href="#/overview" data-nav="overview">总览</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <span class="chainnav" id="chain-nav" role="group" aria-label="切换产业链"></span>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="#/compare" data-nav="compare">多股对比</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="#/invest" data-nav="invest">投资</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="#/review" data-nav="review">月度体检</a>
+    </nav>
+
+    <div class="masthead-meta" id="masthead-meta">
+      <span class="meta-item">
+        <span class="meta-label">数据</span>
+        <span class="meta-value num" id="meta-asof">—</span>
+      </span>
+      <span class="meta-item">
+        <span class="meta-label" id="meta-bench-label">基准</span>
+        <span class="meta-value num" id="meta-bench">—</span>
+      </span>
+      <span class="conn" id="conn-state" title="后端连接状态">
+        <i aria-hidden="true"></i><span id="conn-text">连接中</span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<div class="banner" id="conn-banner" hidden role="alert">
+  <p id="conn-banner-text"></p>
+  <button type="button" class="btn-text" id="conn-retry">重试连接</button>
+</div>
+
+<main id="main" class="view" tabindex="-1">
+  <p class="loading">载入中…</p>
+</main>
+
+<footer class="sitefoot">
+  <span>五条产业链 · 200 只标的</span>
+  <span>月度人工分析 · 无模型调用</span>
+  <span class="tone-legend">指标色：红=正向 · 绿=负向 · 无色=仅参考</span>
+  <span>数据仅供研究，不构成投资建议</span>
+</footer>
+
+<noscript>
+  <p class="noscript">此工作台需要启用 JavaScript。</p>
+</noscript>
+
+<script src="./vendor/plotly.min.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/format.js?v=20261018e"></script>
+<script src="./js/ui.js"></script>
+<script src="./js/help.js?v=20261018e"></script>
+<script src="./js/charts.js?v=20261018e"></script>
+<script src="./js/diagram.js"></script>
+<script src="./js/views/overview.js?v=20261018e"></script>
+<script src="./js/views/chain.js?v=20261018e"></script>
+<script src="./js/views/stock.js?v=20261018e"></script>
+<script src="./js/views/review.js?v=20261018e"></script>
+<script src="./js/views/compare.js?v=20261018e"></script>
+<script src="./js/views/invest.js?v=20261018e"></script>
+<script src="./js/prefetch.js"></script>
+<script src="./js/app.js?v=20261018e"></script>
+</body>
+</html>

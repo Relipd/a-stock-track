@@ -1,0 +1,128 @@
+针对你实测整理的 AKSHARE_FIELDS.md，核心破局思路非常明确：虽然 AkShare 免费接口拿不到排产、RevPAR、硅料现货价、TC/RC 等垂类行业高频数据，但你手里握有每条链 20 家上中下游企业完整的三大报表（776 列）、东财 141 项深度财务指标、历史主营构成拆分（stock_zygc_em）以及沪铜/碳酸锂/工业硅主力期货（CU0/LC0/SI0）。
+在以“月/季”为单位的基本面投资中，“产业链上下游公司的财报科目异动 + 大宗期货价格”本身就是最硬核、最不可造假的行业景气数据。
+关于你在文档末尾提出的接入选择，建议直接拍板：全接 P0（估值扩展包 A + 财务扩展包 B 核心列）+ 全接 P1（期货与宏观代理包 C）+ 接入包 D 的历史主营构成（stock_zygc_em）与股东户数（stock_zh_a_gdhs_detail_em）。
+以下为你逐一设计五条产业链在当前可得数据下的人工核心关注点、与股价强关联的底层字段，以及进阶衍生字段（Composite Signals）：
+一、 五大产业链：人工关注焦点、股价关联字段与衍生指标设计
+1. 白色家电链（whites｜PE 口径）
+* 缺失数据替代方案（人工怎么看）：
+* 用“上游零部件单季营收 + 整机存货/预收”替代【空调排产】：整机厂排产增加，必然提前 1 个季度向 上游零部件 节点采购压缩机与阀件。直接看上游节点 4 家公司的单季营收同比（DJD_TOI_YOY）。
+* 用“stock_zygc_em 按地区拆分”替代【海关家电出口】：拉取 stock_zygc_em 历史期中 分类类型="按地区" 的记录，直接追踪整机与清洁电器公司的“外销/境外”收入占比（revenue_ratio）及外销毛利率（gross_margin）。
+* 用“CU0 沪铜期货 + 国房景气指数/社零”替代【成本与地产竣工】：直接用 futures_main_sina (CU0) 监控铜价冲击，用 macro_china_consumer_goods_retail 观察内销消费底座。
+| 字段层级 | 核心与股价强关联字段（源自 AKSHARE_FIELDS.md） | 进阶衍生设计字段（写入 data.py 计算逻辑） | 股价驱动与人工判断逻辑 |
+|---|---|---|---|
+| 盈利与成本传导 | • XSMLL（销售毛利率）
+• XSJLL（销售净利率）
+• CU0（沪铜主力收盘价/均价） | 毛销净利差：
+XSMLL - XSJLL（或由利润表计算销售费用率侵蚀度） | 识别“买流量内卷”：小家电与清洁电器若毛利率高达 45% 但净利率不足 8% 且差距拉大，说明利润全交了电商投流费，股价难有持续主升浪。 |
+| 景气与周转验证 | • DJD_TOI_YOY（单季营收同比）
+• DJD_DPNP_YOY（单季扣非净利同比）
+• CHZZTS（存货周转天数）
+• YSZKZZTS（应收账款周转天数） | 渠道压货预警系数：
+ΔCHZZTS + ΔYSZKZZTS（存货与应收天数同比变化之和）对比 DJD_TOI_YOY | 验证增长含金量：若单季营收正增长，但存货与应收周转天数显著拉长，说明向经销商塞库存，下季度业绩极易变脸杀估值。 |
+| 估值与底仓安全垫 | • pe_ttm / pe_pct_3y
+• NETCASH_OPERATE（经营现金流）
+• CONSTRUCT_LONG_ASSET（资本开支）
+• stock_history_dividend_detail（派息） | 真实现金股息率 & FCF 收益率：
+1. FCF = NETCASH_OPERATE - CONSTRUCT_LONG_ASSET
+2. FCF_Yield = FCF / 总市值
+3. Dividend_Yield = 年度每股派息 / 当日收盘价 | 焊死白电整机下跌空间：对于 整机·空冰洗 龙头，当 股息率 ≥ 4.5%、FCF > PARENT_NETPROFIT 且 pe_pct_3y ≤ 20% 时，属于典型的长线资金托底击球区。 |
+2. 汽车全产业链（auto｜PE 口径）
+* 缺失数据替代方案（人工怎么看）：
+* 用“整车单季毛利率环比 + 上下游账期挤压”替代【终端折扣率/价格战烈度】：整车厂降价促销会立刻反映在当季 XSMLL（毛利率）下滑，同时整车厂会将压力转嫁给 电池·零部件 节点，表现为零部件厂 YSZKZZTS（应收天数）拉长与毛利率年降。
+* 用“LC0 碳酸锂期货 + 外销主营构成”替代【锂价与出海】：直接接入 futures_main_sina (LC0) 监控锂价是否止跌企稳，并用 stock_zygc_em 追踪整车/客车/零部件海外高毛利收入占比提升速度。
+| 字段层级 | 核心与股价强关联字段（源自 AKSHARE_FIELDS.md） | 进阶衍生设计字段（写入 data.py 计算逻辑） | 股价驱动与人工判断逻辑 |
+|---|---|---|---|
+| 规模效应与业绩爆发 | • DJD_TOI_YOY（单季营收同比）
+• DJD_DPNP_YOY（单季扣非净利同比）
+• DEDUCT_PARENT_NETPROFIT（扣非归母净利） | 单季经营杠杆弹性 (DOL)：
+DJD_DPNP_YOY / DJD_TOI_YOY（仅在单季营收同比 >15% 时有效） | 捕捉爆款车型主升浪：汽车重资产折旧固定，一旦新车放量跨过盈亏平衡点，会出现“营收涨 30%、扣非净利涨 80%+”（DOL > 2），这是汽车股戴维斯双击的最强信号。 |
+| 产业链议价权（防踩雷） | • 应付周转天数、预付周转天数
+• YSZKZZTS（应收周转天数）
+• CHZZTS（存货周转天数）
+• 营业周期 | 净营业周期 (CCC 占款能力)：
+CHZZTS + YSZKZZTS - 应付周转天数 | 识别零部件“伪低估”：强势整车与电池龙头 CCC < 0（无偿占用上下游资金）；若某零部件股 PE 看似很低，但 YSZKZZTS > 120天 且 XSMLL 连续两季同比下滑，说明沦为价格战买单方，坚决不买。 |
+| 成长估值匹配度 | • stock_value_em：PEG值、市销率 (PS)
+• stock_zh_valuation_comparison_em：市盈率-26E/27E
+• stock_profit_forecast_em：预测 EPS | 动态前瞻 PE 折价率：
+市盈率-26E / 行业中值-26E 及 PEG | 解决智能化与高成长估值锚：对 智能化·服务 与高增零部件，静态 pe_ttm 常年偏高，股价核心锚定 26E Forward PE ≤ 20x 且 0 < PEG < 1。 |
+3. 酒店旅游链（tourism｜PE 口径）
+* 缺失数据替代方案（人工怎么看）：
+* 用“民航客座率 + 民航总周转量”替代【商旅与出行客流】：直接接入 macro_china_passenger_load_factor（民航客座率/载运率）与 macro_china_society_traffic_volume（民航总周转量/客运量），作为月度高频出行温度计。
+* 用“单季毛利率 (XSMLL) 弹性”替代【酒店 ADR 房价与景区/免税客单价】：酒店、景区、口岸免税的折旧与租金高度固定。如果只有客流没有客单价（靠降价促销），单季毛利率必跌；只有当 ADR（平均房价）或人均消费真实回升时，单季 XSMLL 和 ROIC 才会出现同比跳升。
+| 字段层级 | 核心与股价强关联字段（源自 AKSHARE_FIELDS.md） | 进阶衍生设计字段（写入 data.py 计算逻辑） | 股价驱动与人工判断逻辑 |
+|---|---|---|---|
+| 真实估值锚（剔除折旧噪音） | • stock_zh_valuation_comparison_em：EV/EBITDA-24A
+• stock_value_em：市现率 (PCF)、总市值
+• 利润/现金流表：OPERATE_PROFIT、IA_AMORTIZE（无形摊销）、LPE_AMORTIZE（长期待摊） | 动态 EV/EBITDA：
+(总市值 + SHORT_LOAN + LONG_LOAN + BOND_PAYABLE - MONETARYFUNDS) / (OPERATE_PROFIT + 折旧与摊销) | 机构对酒店/景区定价的真正标尺：连锁酒店（长期待摊装修费高）与自然景区（索道折旧高）账面净利常被非现金折旧摊薄，导致表观 PE 虚高；当动态 EV/EBITDA 或 市现率 处于历史底部且旺季现金流强劲时，股价具备极高安全边际。 |
+| 重资产扩建排雷 | • CIP（在建工程）
+• FIXED_ASSET（固定资产）
+• CONSTRUCT_LONG_ASSET（资本开支）
+• FINANCE_EXPENSE（财务费用） | 在建工程转固压力比：
+CIP / FIXED_ASSET 及 CONSTRUCT_LONG_ASSET / NETCASH_OPERATE | 防范“人工古镇/新酒店转固杀业绩”：若某景区或酒店公司的 CIP / FIXED_ASSET > 30%，一旦新项目完工转入固定资产，巨额折旧叠加利息费用（FINANCE_EXPENSE）会直接吞噬未来 2 年利润，引发股价戴维斯双杀。 |
+| 旺季兑现度 | • DJD_TOI_YOY（单季营收同比，重点看 Q3）
+• XSMLL（销售毛利率）
+• ROIC（投入资本回报率） | 旺季经营溢价差：
+Q3 单季 XSMLL - 过去3年Q3平均 XSMLL | 检验“旺丁是否旺财”：Q3 暑期是全年胜负手，若民航客座率创新高但公司 Q3 单季毛利率低于历史旺季均值，说明消费降级证伪，需果断减仓。 |
+4. 光伏能源链（pv｜PB 口径）
+* 缺失数据替代方案（人工怎么看）：
+* 用“现金流量表资本开支 (CONSTRUCT_LONG_ASSET) + 在建工程 (CIP)”替代【行业产能出清进度】：外界排产传闻真假难辨，但企业的真金白银不会撒谎。直接统计 pv 链 20 家公司单季 CONSTRUCT_LONG_ASSET（购建固定资产支付的现金）同比增速——只有当全链资本开支同比腰斩（<-40%）、CIP 停止增长且 INVENTORY（存货绝对额）连续两个季度环比下降时，供给侧出清才算真正落地。
+* 用“SI0 工业硅期货 + 硅料节点单季毛利率”替代【硅料现货与现金成本底】：用 futures_main_sina (SI0) 跟踪上游硅原料价格；当 硅料·辅材 节点龙头的单季 XSMLL（毛利率）跌破 -5% 且 INVENTORY_REDUCE 异常时，即代表行业已击穿现金成本线。
+| 字段层级 | 核心与股价强关联字段（源自 AKSHARE_FIELDS.md） | 进阶衍生设计字段（写入 data.py 计算逻辑） | 股价驱动与人工判断逻辑 |
+|---|---|---|---|
+| 净资产（B）含金量与减值排雷 | • TOTAL_PARENT_EQUITY（归母净资产）、BPS（每股净资产）
+• ASSET_IMPAIRMENT_LOSS（资产减值损失）
+• CREDIT_IMPAIRMENT_LOSS（信用减值损失）
+• DEDUCT_PARENT_NETPROFIT | 单季净资产失血率 (BV Burn Rate)：
+`(单季 DEDUCT_PARENT_NETPROFIT - | ASSET_IMPAIRMENT_LOSS |
+| 底部生存期（活到反转） | • MONETARYFUNDS（货币资金）
+• SHORT_LOAN（短期借款）、LONG_LOAN、BOND_PAYABLE
+• ZCFZL（资产负债率） | 净有息负债率 & 现金短债比：
+1. 现金短债比 = MONETARYFUNDS / SHORT_LOAN
+2. 净负债率 = (有息负债合计 - MONETARYFUNDS) / TOTAL_PARENT_EQUITY | 左侧建仓硬门槛：在周期底部抄底 pv 主链标的，必须满足 pb_pct_3y ≤ 20% 且 现金短债比 > 1.2、净负债率可控，确保公司无需在底部低价增发摊薄股东权益。 |
+| 出清拐点与设备坏账 | • CONSTRUCT_LONG_ASSET（资本开支）
+• INVENTORY（存货金额）
+• YSZKZZTS（应收周转天数，专看设备节点） | Capex 收缩率 & 存货环比增速：
+CONSTRUCT_LONG_ASSET_YoY 与 INVENTORY_QoQ | 抓右侧反转信号：当主链 INVENTORY_QoQ < 0 且单季 XSMLL 环比转正时，股价开启 PB 修复；同时对 设备 节点严查 YSZKZZTS 与 CREDIT_IMPAIRMENT_LOSS（防范下游电池厂欠款爆雷）。 |
+5. 铜下游链（copper｜PB 口径）
+* 缺失数据替代方案（人工怎么看）：
+* 直接用“CU0 沪铜主力 + futures_inventory_em (cu) 铜库存”锁定【资源端量价齐升】：这是五条链中行业高频数据最完整的一条——AkShare 可直接日频获取沪铜价格与期货库存增减。“沪铜价格突破 + 铜期货库存持续下降”直接驱动上游矿企股价主升浪。
+* 用“stock_zygc_em 矿山自产 vs 冶炼占比 + 节点毛利差”替代【TC/RC 加工费】：利用 stock_zygc_em 识别 铜矿·冶炼 节点中各公司的“自产铜精矿”利润占比（profit_ratio）；当纯冶炼公司单季 XSMLL 逼近 0% 而矿企 XSMLL 飙升时，即反映 TC/RC 极度紧缺。
+* 用“全社会用电量 + 电网设备合同负债/存货备货”替代【电网招标与铜杆开工】：宏观接入 macro_china_society_electricity（用电量同比）；微观紧盯 电网·终端 与 电缆 节点资产负债表中的 INVENTORY（为中标订单备货）与单季营收 DJD_TOI_YOY 兑现节奏。
+| 字段层级 | 核心与股价强关联字段（源自 AKSHARE_FIELDS.md） | 进阶衍生设计字段（写入 data.py 计算逻辑） | 股价驱动与人工判断逻辑 |
+|---|---|---|---|
+| PB 重估核心（区分矿、工、电） | • pb、pb_pct_3y
+• ROIC（投入资本回报率）、ROEJQ（加权ROE）
+• CU0（沪铜价格）、cu（铜期货库存） | PB / ROIC 价值比：
+pb / (ROIC * 100) | 打破“低 PB 幻觉”：铜加工 节点挣微薄加工费，ROIC 常年仅 4%~6%，1.0 倍 PB 并不便宜；而高自给率 铜矿 与高压 电网·终端 龙头 ROIC ≥ 15%，当其 pb_pct_3y ≤ 25% 且铜价/用电量向上时，具备极强重估弹性。 |
+| 高铜价下的中游垫资挤压 | • NETCASH_OPERATE（经营现金流净额）
+• ACCOUNTS_RECE（应收账款）、INVENTORY（存货）
+• SHORT_LOAN（短期借款） | 营运资金吞噬率：
+(ΔINVENTORY + ΔACCOUNTS_RECE) / TOTAL_OPERATE_INCOME 及 ocf_to_profit（净现比） | 规避中游“增收反缺钱”：在铜价大涨期，铜加工与普通电缆厂买铜需现款、卖货给账期。若出现账面 PARENT_NETPROFIT > 0 但 NETCASH_OPERATE 大幅为负、SHORT_LOAN 激增，股价必跑输大盘。 |
+二、 五链通用：直接与股价拐点挂钩的“筹码与预期差”进阶字段
+除了上述行业基本面字段外，AKSHARE_FIELDS.md 中实测可用的 股东户数（stock_zh_a_gdhs_detail_em） 与 盈利预测（stock_profit_forecast_em），是连接“基本面逻辑”与“月度股价启动时机”的最佳桥梁，建议作为通用字段全链引入：
+* 筹码集中度加速指标（来自 stock_zh_a_gdhs_detail_em）
+* 核心字段：股东户数增减比例、户均持股市值。
+* 与股价关联逻辑：在月度持仓体系中，如果你通过财务指标发现某只标的处于低估值（pe_pct_3y 或 pb_pct_3y ≤ 25%）且单季毛利率/净利出现拐点，此时若叠加“最新两期股东户数连续环比下降（如累计降幅 > 8%）且户均持股市值上升”，说明散户在交出筹码、机构或产业资金正在左侧吸筹建仓，建仓后的胜率与股价爆发速度会显著提升。
+* 机构预期差与冷门反转指标（来自 stock_profit_forecast_em + stock_zh_valuation_comparison_em）
+* 核心字段：研报数、买入/增持家数、2026预测EPS、市盈率-26E、行业中值。
+* 与股价关联逻辑：
+* 冷门反转暴击：当某只股票过去半年 研报数 ≤ 3（市场无人问津）、估值处于底部，但最新季报突然出现 DJD_DPNP_YOY > 30%（单季扣非净利大超预期），往往会引发机构扎堆补写研报，带来剧烈的估值修复。
+* 拥挤度排雷：当某只热门股估值分位 ≥ 80%，且全市场一致给出极高的 2026预测EPS，一旦单季增速稍有放缓，就会触发猛烈的杀估值。
+三、 数据层扩容落地方案（data/*.parquet 升级清单）
+结合你文档 §10 和 §11 的菜单，建议完全不碰 §9 和 §10.E 中不稳定或报错的接口，直接在现有 4 张 Parquet 表基础上做如下精准扩列（外加 1 张轻量级的宏观期货表）：
+| Parquet 文件 | 现有列数 | 建议新增接入接口（全部实测可用） | 新增落盘的核心字段（精选高价值列） |
+|---|---|---|---|
+| valuation.parquet | 8 列 | • stock_value_em
+• stock_zh_valuation_comparison_em
+• stock_history_dividend_detail | total_mv（总市值）, ps_ttm（市销率）, pcf_ttm（市现率）, peg, pe_26e（前瞻PE）, ev_ebitda, dividend_yield（计算股息率） |
+| fundamentals.parquet | 11 列 | • stock_financial_analysis_indicator_em
+• 三大报表（资产/利润/现金流_em） | roic, single_q_rev_yoy（单季营收同比 DJD_TOI_YOY）, single_q_profit_yoy（单季扣非同比 DJD_DPNP_YOY）, ap_days（应付周转天数）, fcf（自由现金流）, capex（CONSTRUCT_LONG_ASSET）, cip（在建工程）, net_debt_ratio（净有息负债率）, cash_to_short_debt（现金短债比）, impairment_to_equity（资产+信用减值占净资产比） |
+| business.parquet | 12 列 | • stock_zygc_em（改为拉取近 3~5 年历史期） | 增加对 分类类型="按地区" 的清洗标记，自动聚合出每期 overseas_rev_ratio（海外收入占比）与 overseas_gm（海外毛利率） |
+| sentiment.parquet（或扩充为筹码预期表） | 10 列 | • stock_zh_a_gdhs_detail_em
+• stock_profit_forecast_em | holder_num_chg_pct（股东户数变动比例）, avg_holder_mv（户均持股市值）, report_count（研报关注家数）, eps_26e（2026预测EPS） |
+| macro_futures.parquet（新增单表） | 0 列 | • futures_main_sina (CU0/LC0/SI0)
+• futures_inventory_em (cu)
+• 民航客座率 / 用电量 / 社零 | 存储日频期货（沪铜 CU0、碳酸锂 LC0、工业硅 SI0 收盘价与 20/60 日涨跌幅、铜库存 cu_inv） 与月频宏观序列（民航客座率、全社会用电同比、社零同比），直接供单链顶部 KPI 读数调用！ |
+> 最大惊喜：新建 macro_futures.parquet 并结合节点内财务聚合后，你之前在 README.md §1 和 §10 中提到的遗憾——“每条链 4 个行业 KPI 目前只是定义，尚未接入真实数据”——将直接被这套“期货实盘价格 + 宏观月度数据 + 节点单季财报代理指标”无缝填补，无需购买任何昂贵的第三方行业数据库！
+>

@@ -1,0 +1,41 @@
+{
+  "datasets": {
+    "chains": {
+      "last_run": "2026-10-18T19:50:07",
+      "ok": true,
+      "seconds": 0,
+      "note": "initial baseline after 2026-10-18 refresh"
+    },
+    "valuation_ext": {
+      "last_run": "2026-10-18T19:50:07",
+      "ok": true,
+      "seconds": 0,
+      "note": "initial baseline after 2026-10-18 refresh"
+    },
+    "financial_ext": {
+      "last_run": "2026-10-18T19:50:07",
+      "ok": true,
+      "seconds": 0,
+      "note": "initial baseline after 2026-10-18 refresh"
+    },
+    "business": {
+      "last_run": "2026-10-18T19:50:07",
+      "ok": true,
+      "seconds": 0,
+      "note": "initial baseline after 2026-10-18 refresh"
+    },
+    "chips": {
+      "last_run": "2026-10-18T19:50:07",
+      "ok": true,
+      "seconds": 0,
+      "note": "initial baseline after 2026-10-18 refresh"
+    },
+    "macro": {
+      "last_run": "2026-10-18T19:50:07",
+      "ok": true,
+      "seconds": 0,
+      "note": "initial baseline after 2026-10-18 refresh"
+    }
+  },
+  "updated_at": "2026-10-18T19:50:07"
+}

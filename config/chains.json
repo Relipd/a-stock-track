@@ -1,0 +1,1634 @@
+{
+  "benchmark": {
+    "symbol": "000300.SH",
+    "name": "沪深300",
+    "index": "sh000300"
+  },
+  "chains": [
+    {
+      "id": "whites",
+      "name": "白色家电",
+      "short": "白电",
+      "description": "上游零部件 → 整机（空冰洗）→ 厨电 / 小家电 / 清洁电器；成本、渠道与更新需求决定利润分配。",
+      "valuation_basis": "pe",
+      "kpis": [
+        {
+          "name": "空调排产",
+          "unit": "万台",
+          "freq": "月",
+          "source": "产业在线"
+        },
+        {
+          "name": "房屋竣工面积",
+          "unit": "同比%",
+          "freq": "月",
+          "source": "统计局"
+        },
+        {
+          "name": "铜价",
+          "unit": "元/吨",
+          "freq": "日",
+          "source": "上期所"
+        },
+        {
+          "name": "家电出口金额",
+          "unit": "同比%",
+          "freq": "月",
+          "source": "海关"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "upstream",
+          "name": "上游零部件",
+          "role": "upstream",
+          "description": "阀件、压缩机、电机与控制器件，决定整机成本与排产",
+          "sort": 1
+        },
+        {
+          "id": "appliance",
+          "name": "整机 · 空冰洗",
+          "role": "midstream",
+          "description": "空调、冰洗与综合白电，规模与渠道是核心",
+          "sort": 2
+        },
+        {
+          "id": "kitchen",
+          "name": "厨电",
+          "role": "downstream",
+          "description": "油烟机、灶具、集成灶，与地产竣工和更新需求相关",
+          "sort": 3
+        },
+        {
+          "id": "small",
+          "name": "小家电",
+          "role": "downstream",
+          "description": "厨房小电与西式小电，需求弹性大、竞争激烈",
+          "sort": 4
+        },
+        {
+          "id": "clean",
+          "name": "清洁电器",
+          "role": "downstream",
+          "description": "扫地机、洗地机，渗透率与出海是主要逻辑",
+          "sort": 5
+        }
+      ],
+      "instruments": [
+        {
+          "symbol": "002050.SZ",
+          "name": "三花智控",
+          "node_id": "upstream",
+          "role": "upstream"
+        },
+        {
+          "symbol": "002011.SZ",
+          "name": "盾安环境",
+          "node_id": "upstream",
+          "role": "upstream"
+        },
+        {
+          "symbol": "600619.SH",
+          "name": "海立股份",
+          "node_id": "upstream",
+          "role": "upstream"
+        },
+        {
+          "symbol": "002402.SZ",
+          "name": "和而泰",
+          "node_id": "upstream",
+          "role": "upstream"
+        },
+        {
+          "symbol": "000333.SZ",
+          "name": "美的集团",
+          "node_id": "appliance",
+          "role": "midstream"
+        },
+        {
+          "symbol": "000651.SZ",
+          "name": "格力电器",
+          "node_id": "appliance",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600690.SH",
+          "name": "海尔智家",
+          "node_id": "appliance",
+          "role": "midstream"
+        },
+        {
+          "symbol": "000921.SZ",
+          "name": "海信家电",
+          "node_id": "appliance",
+          "role": "midstream"
+        },
+        {
+          "symbol": "000521.SZ",
+          "name": "长虹美菱",
+          "node_id": "appliance",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600336.SH",
+          "name": "澳柯玛",
+          "node_id": "appliance",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002508.SZ",
+          "name": "老板电器",
+          "node_id": "kitchen",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002035.SZ",
+          "name": "华帝股份",
+          "node_id": "kitchen",
+          "role": "downstream"
+        },
+        {
+          "symbol": "300894.SZ",
+          "name": "火星人",
+          "node_id": "kitchen",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002677.SZ",
+          "name": "浙江美大",
+          "node_id": "kitchen",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002032.SZ",
+          "name": "苏泊尔",
+          "node_id": "small",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002242.SZ",
+          "name": "九阳股份",
+          "node_id": "small",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002959.SZ",
+          "name": "小熊电器",
+          "node_id": "small",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002705.SZ",
+          "name": "新宝股份",
+          "node_id": "small",
+          "role": "downstream"
+        },
+        {
+          "symbol": "603486.SH",
+          "name": "科沃斯",
+          "node_id": "clean",
+          "role": "downstream"
+        },
+        {
+          "symbol": "688169.SH",
+          "name": "石头科技",
+          "node_id": "clean",
+          "role": "downstream"
+        },
+        {
+          "symbol": "601956.SH",
+          "name": "东贝集团",
+          "node_id": "upstream",
+          "role": "upstream",
+          "note": "压缩机"
+        },
+        {
+          "symbol": "000404.SZ",
+          "name": "长虹华意",
+          "node_id": "upstream",
+          "role": "upstream",
+          "note": "压缩机"
+        },
+        {
+          "symbol": "300911.SZ",
+          "name": "亿田智能",
+          "node_id": "kitchen",
+          "role": "downstream",
+          "note": "集成灶"
+        },
+        {
+          "symbol": "002543.SZ",
+          "name": "万和电气",
+          "node_id": "kitchen",
+          "role": "downstream",
+          "note": "热水器/厨电"
+        },
+        {
+          "symbol": "002403.SZ",
+          "name": "爱仕达",
+          "node_id": "small",
+          "role": "downstream",
+          "note": "炊具/小家电"
+        },
+        {
+          "symbol": "002615.SZ",
+          "name": "哈尔斯",
+          "node_id": "small",
+          "role": "downstream",
+          "note": "杯壶"
+        },
+        {
+          "symbol": "603355.SH",
+          "name": "莱克电气",
+          "node_id": "clean",
+          "role": "downstream",
+          "note": "清洁电器/小家电"
+        },
+        {
+          "symbol": "603219.SH",
+          "name": "富佳股份",
+          "node_id": "clean",
+          "role": "downstream",
+          "note": "吸尘器 ODM"
+        },
+        {
+          "symbol": "605555.SH",
+          "name": "德昌股份",
+          "node_id": "clean",
+          "role": "downstream",
+          "note": "电机/清洁电器 ODM"
+        },
+        {
+          "symbol": "603657.SH",
+          "name": "春光科技",
+          "node_id": "clean",
+          "role": "downstream",
+          "note": "吸尘器软管"
+        },
+        {
+          "symbol": "002860.SZ",
+          "name": "星帅尔",
+          "node_id": "upstream",
+          "role": "upstream",
+          "note": "热保护器/电机"
+        },
+        {
+          "symbol": "603677.SH",
+          "name": "奇精机械",
+          "node_id": "upstream",
+          "role": "upstream",
+          "note": "精密零部件"
+        },
+        {
+          "symbol": "600854.SH",
+          "name": "春兰股份",
+          "node_id": "appliance",
+          "role": "midstream",
+          "note": "空调"
+        },
+        {
+          "symbol": "600983.SH",
+          "name": "惠而浦",
+          "node_id": "appliance",
+          "role": "midstream",
+          "note": "白电"
+        },
+        {
+          "symbol": "603366.SH",
+          "name": "日出东方",
+          "node_id": "kitchen",
+          "role": "downstream",
+          "note": "热水器/厨电"
+        },
+        {
+          "symbol": "605336.SH",
+          "name": "帅丰电器",
+          "node_id": "kitchen",
+          "role": "downstream",
+          "note": "集成灶"
+        },
+        {
+          "symbol": "603215.SH",
+          "name": "比依股份",
+          "node_id": "small",
+          "role": "downstream",
+          "note": "空气炸锅 ODM"
+        },
+        {
+          "symbol": "001259.SZ",
+          "name": "利仁科技",
+          "node_id": "small",
+          "role": "downstream",
+          "note": "小家电"
+        },
+        {
+          "symbol": "301187.SZ",
+          "name": "欧圣电气",
+          "node_id": "clean",
+          "role": "downstream",
+          "note": "吸尘器 ODM"
+        },
+        {
+          "symbol": "301332.SZ",
+          "name": "德尔玛",
+          "node_id": "clean",
+          "role": "downstream",
+          "note": "清洁/小家电"
+        }
+      ]
+    },
+    {
+      "id": "pv",
+      "name": "光伏能源",
+      "short": "光伏",
+      "description": "硅料/辅材 → 硅片/电池 → 组件 → 逆变器/电站；价格战下利润在链条内重新分配。",
+      "valuation_basis": "pb",
+      "kpis": [
+        {
+          "name": "多晶硅致密料价格",
+          "unit": "元/kg",
+          "freq": "周",
+          "source": "硅业分会"
+        },
+        {
+          "name": "组件价格",
+          "unit": "元/W",
+          "freq": "周",
+          "source": "InfoLink"
+        },
+        {
+          "name": "光伏新增装机",
+          "unit": "GW",
+          "freq": "月",
+          "source": "能源局"
+        },
+        {
+          "name": "光伏出口金额",
+          "unit": "同比%",
+          "freq": "月",
+          "source": "海关"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "silicon",
+          "name": "硅料 / 辅材",
+          "role": "upstream",
+          "description": "多晶硅、玻璃、胶膜，价格弹性最大",
+          "sort": 1
+        },
+        {
+          "id": "wafer",
+          "name": "硅片 / 电池",
+          "role": "midstream",
+          "description": "硅片与电池片，产能与开工率决定盈利",
+          "sort": 2
+        },
+        {
+          "id": "module",
+          "name": "组件",
+          "role": "midstream",
+          "description": "组件一体化，海外渠道与品牌溢价",
+          "sort": 3
+        },
+        {
+          "id": "inverter",
+          "name": "逆变器 / 电站",
+          "role": "downstream",
+          "description": "逆变器、储能与电站运营，需求端受益",
+          "sort": 4
+        },
+        {
+          "id": "equipment",
+          "name": "设备",
+          "role": "upstream",
+          "description": "串焊机、丝网印刷等扩产设备，后周期",
+          "sort": 5
+        }
+      ],
+      "instruments": [
+        {
+          "symbol": "600438.SH",
+          "name": "通威股份",
+          "node_id": "silicon",
+          "role": "upstream"
+        },
+        {
+          "symbol": "688303.SH",
+          "name": "大全能源",
+          "node_id": "silicon",
+          "role": "upstream"
+        },
+        {
+          "symbol": "600089.SH",
+          "name": "特变电工",
+          "node_id": "silicon",
+          "role": "upstream"
+        },
+        {
+          "symbol": "601865.SH",
+          "name": "福莱特",
+          "node_id": "silicon",
+          "role": "upstream"
+        },
+        {
+          "symbol": "603806.SH",
+          "name": "福斯特",
+          "node_id": "silicon",
+          "role": "upstream"
+        },
+        {
+          "symbol": "002129.SZ",
+          "name": "TCL中环",
+          "node_id": "wafer",
+          "role": "midstream"
+        },
+        {
+          "symbol": "601012.SH",
+          "name": "隆基绿能",
+          "node_id": "wafer",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600732.SH",
+          "name": "爱旭股份",
+          "node_id": "wafer",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002865.SZ",
+          "name": "钧达股份",
+          "node_id": "wafer",
+          "role": "midstream"
+        },
+        {
+          "symbol": "300118.SZ",
+          "name": "东方日升",
+          "node_id": "module",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002459.SZ",
+          "name": "晶澳科技",
+          "node_id": "module",
+          "role": "midstream"
+        },
+        {
+          "symbol": "688599.SH",
+          "name": "天合光能",
+          "node_id": "module",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002506.SZ",
+          "name": "协鑫集成",
+          "node_id": "module",
+          "role": "midstream"
+        },
+        {
+          "symbol": "300274.SZ",
+          "name": "阳光电源",
+          "node_id": "inverter",
+          "role": "downstream"
+        },
+        {
+          "symbol": "300763.SZ",
+          "name": "锦浪科技",
+          "node_id": "inverter",
+          "role": "downstream"
+        },
+        {
+          "symbol": "688390.SH",
+          "name": "固德威",
+          "node_id": "inverter",
+          "role": "downstream"
+        },
+        {
+          "symbol": "601877.SH",
+          "name": "正泰电器",
+          "node_id": "inverter",
+          "role": "downstream"
+        },
+        {
+          "symbol": "688516.SH",
+          "name": "奥特维",
+          "node_id": "equipment",
+          "role": "upstream"
+        },
+        {
+          "symbol": "300751.SZ",
+          "name": "迈为股份",
+          "node_id": "equipment",
+          "role": "upstream"
+        },
+        {
+          "symbol": "603396.SH",
+          "name": "金辰股份",
+          "node_id": "equipment",
+          "role": "upstream"
+        },
+        {
+          "symbol": "002623.SZ",
+          "name": "亚玛顿",
+          "node_id": "silicon",
+          "role": "upstream",
+          "note": "光伏玻璃"
+        },
+        {
+          "symbol": "601908.SH",
+          "name": "京运通",
+          "node_id": "wafer",
+          "role": "midstream",
+          "note": "硅片/设备"
+        },
+        {
+          "symbol": "688556.SH",
+          "name": "高测股份",
+          "node_id": "wafer",
+          "role": "midstream",
+          "note": "切片设备/耗材"
+        },
+        {
+          "symbol": "600537.SH",
+          "name": "亿晶光电",
+          "node_id": "module",
+          "role": "midstream",
+          "note": "电池/组件"
+        },
+        {
+          "symbol": "002218.SZ",
+          "name": "拓日新能",
+          "node_id": "module",
+          "role": "midstream",
+          "note": "组件/电站"
+        },
+        {
+          "symbol": "300827.SZ",
+          "name": "上能电气",
+          "node_id": "inverter",
+          "role": "downstream",
+          "note": "逆变器/储能"
+        },
+        {
+          "symbol": "688032.SH",
+          "name": "禾迈股份",
+          "node_id": "inverter",
+          "role": "downstream",
+          "note": "微逆"
+        },
+        {
+          "symbol": "300316.SZ",
+          "name": "晶盛机电",
+          "node_id": "equipment",
+          "role": "upstream",
+          "note": "长晶设备"
+        },
+        {
+          "symbol": "300724.SZ",
+          "name": "捷佳伟创",
+          "node_id": "equipment",
+          "role": "upstream",
+          "note": "电池设备"
+        },
+        {
+          "symbol": "300776.SZ",
+          "name": "帝尔激光",
+          "node_id": "equipment",
+          "role": "upstream",
+          "note": "激光设备"
+        },
+        {
+          "symbol": "603260.SH",
+          "name": "合盛硅业",
+          "node_id": "silicon",
+          "role": "upstream",
+          "note": "工业硅/硅料"
+        },
+        {
+          "symbol": "300821.SZ",
+          "name": "东岳硅材",
+          "node_id": "silicon",
+          "role": "upstream",
+          "note": "有机硅/硅料"
+        },
+        {
+          "symbol": "603185.SH",
+          "name": "弘元绿能",
+          "node_id": "wafer",
+          "role": "midstream",
+          "note": "硅片"
+        },
+        {
+          "symbol": "300861.SZ",
+          "name": "美畅股份",
+          "node_id": "wafer",
+          "role": "midstream",
+          "note": "金刚线"
+        },
+        {
+          "symbol": "002056.SZ",
+          "name": "横店东磁",
+          "node_id": "module",
+          "role": "midstream",
+          "note": "组件/磁材"
+        },
+        {
+          "symbol": "300393.SZ",
+          "name": "中来股份",
+          "node_id": "module",
+          "role": "midstream",
+          "note": "组件/背板"
+        },
+        {
+          "symbol": "002335.SZ",
+          "name": "科华数据",
+          "node_id": "inverter",
+          "role": "downstream",
+          "note": "储能/逆变器"
+        },
+        {
+          "symbol": "300693.SZ",
+          "name": "盛弘股份",
+          "node_id": "inverter",
+          "role": "downstream",
+          "note": "储能/充电桩"
+        },
+        {
+          "symbol": "000821.SZ",
+          "name": "京山轻机",
+          "node_id": "equipment",
+          "role": "upstream",
+          "note": "组件设备"
+        },
+        {
+          "symbol": "688559.SH",
+          "name": "海目星",
+          "node_id": "equipment",
+          "role": "upstream",
+          "note": "激光/电池设备"
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "name": "汽车全产业链",
+      "short": "汽车",
+      "description": "电池/零部件 → 整车 → 智能化与服务；电动化与出海是两条主线。",
+      "valuation_basis": "pe",
+      "kpis": [
+        {
+          "name": "乘用车零售",
+          "unit": "万辆",
+          "freq": "周",
+          "source": "乘联会"
+        },
+        {
+          "name": "新能源渗透率",
+          "unit": "%",
+          "freq": "月",
+          "source": "乘联会"
+        },
+        {
+          "name": "汽车出口",
+          "unit": "万辆",
+          "freq": "月",
+          "source": "中汽协"
+        },
+        {
+          "name": "碳酸锂价格",
+          "unit": "万元/吨",
+          "freq": "日",
+          "source": "SMM"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "parts",
+          "name": "电池 / 零部件",
+          "role": "upstream",
+          "description": "电池、电机电控、底盘与内外饰，成本与份额决定盈利",
+          "sort": 1
+        },
+        {
+          "id": "oem",
+          "name": "整车",
+          "role": "midstream",
+          "description": "自主、合资与新势力，产品周期与价格战是核心",
+          "sort": 2
+        },
+        {
+          "id": "smart",
+          "name": "智能化 / 服务",
+          "role": "downstream",
+          "description": "智驾、座舱、玻璃车灯与检测服务，渗透率提升",
+          "sort": 3
+        }
+      ],
+      "instruments": [
+        {
+          "symbol": "300750.SZ",
+          "name": "宁德时代",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "300014.SZ",
+          "name": "亿纬锂能",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "300124.SZ",
+          "name": "汇川技术",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "601689.SH",
+          "name": "拓普集团",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "600741.SH",
+          "name": "华域汽车",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "600699.SH",
+          "name": "均胜电子",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "603596.SH",
+          "name": "伯特利",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "002126.SZ",
+          "name": "银轮股份",
+          "node_id": "parts",
+          "role": "upstream"
+        },
+        {
+          "symbol": "002594.SZ",
+          "name": "比亚迪",
+          "node_id": "oem",
+          "role": "midstream"
+        },
+        {
+          "symbol": "601633.SH",
+          "name": "长城汽车",
+          "node_id": "oem",
+          "role": "midstream"
+        },
+        {
+          "symbol": "000625.SZ",
+          "name": "长安汽车",
+          "node_id": "oem",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600104.SH",
+          "name": "上汽集团",
+          "node_id": "oem",
+          "role": "midstream"
+        },
+        {
+          "symbol": "601238.SH",
+          "name": "广汽集团",
+          "node_id": "oem",
+          "role": "midstream"
+        },
+        {
+          "symbol": "601127.SH",
+          "name": "赛力斯",
+          "node_id": "oem",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600418.SH",
+          "name": "江淮汽车",
+          "node_id": "oem",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002920.SZ",
+          "name": "德赛西威",
+          "node_id": "smart",
+          "role": "downstream"
+        },
+        {
+          "symbol": "688326.SH",
+          "name": "经纬恒润",
+          "node_id": "smart",
+          "role": "downstream"
+        },
+        {
+          "symbol": "600660.SH",
+          "name": "福耀玻璃",
+          "node_id": "smart",
+          "role": "downstream"
+        },
+        {
+          "symbol": "601799.SH",
+          "name": "星宇股份",
+          "node_id": "smart",
+          "role": "downstream"
+        },
+        {
+          "symbol": "601965.SH",
+          "name": "中国汽研",
+          "node_id": "smart",
+          "role": "downstream"
+        },
+        {
+          "symbol": "603305.SH",
+          "name": "旭升集团",
+          "node_id": "parts",
+          "role": "upstream",
+          "note": "铝压铸/轻量化"
+        },
+        {
+          "symbol": "002472.SZ",
+          "name": "双环传动",
+          "node_id": "parts",
+          "role": "upstream",
+          "note": "齿轮/减速器"
+        },
+        {
+          "symbol": "600733.SH",
+          "name": "北汽蓝谷",
+          "node_id": "oem",
+          "role": "midstream",
+          "note": "新能源整车"
+        },
+        {
+          "symbol": "600066.SH",
+          "name": "宇通客车",
+          "node_id": "oem",
+          "role": "midstream",
+          "note": "客车/出口"
+        },
+        {
+          "symbol": "600166.SH",
+          "name": "福田汽车",
+          "node_id": "oem",
+          "role": "midstream",
+          "note": "商用车"
+        },
+        {
+          "symbol": "300496.SZ",
+          "name": "中科创达",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "智能座舱/操作系统"
+        },
+        {
+          "symbol": "002906.SZ",
+          "name": "华阳集团",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "座舱/智驾"
+        },
+        {
+          "symbol": "603197.SH",
+          "name": "保隆科技",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "传感器/空悬"
+        },
+        {
+          "symbol": "002405.SZ",
+          "name": "四维图新",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "地图/智驾"
+        },
+        {
+          "symbol": "300552.SZ",
+          "name": "万集科技",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "V2X/激光雷达"
+        },
+        {
+          "symbol": "300258.SZ",
+          "name": "精锻科技",
+          "node_id": "parts",
+          "role": "upstream",
+          "note": "精锻齿轮"
+        },
+        {
+          "symbol": "600933.SH",
+          "name": "爱柯迪",
+          "node_id": "parts",
+          "role": "upstream",
+          "note": "铝压铸"
+        },
+        {
+          "symbol": "000887.SZ",
+          "name": "中鼎股份",
+          "node_id": "parts",
+          "role": "upstream",
+          "note": "密封/底盘"
+        },
+        {
+          "symbol": "000550.SZ",
+          "name": "江铃汽车",
+          "node_id": "oem",
+          "role": "midstream",
+          "note": "商用车/乘用车"
+        },
+        {
+          "symbol": "600006.SH",
+          "name": "东风汽车",
+          "node_id": "oem",
+          "role": "midstream",
+          "note": "商用车"
+        },
+        {
+          "symbol": "000800.SZ",
+          "name": "一汽解放",
+          "node_id": "oem",
+          "role": "midstream",
+          "note": "重卡"
+        },
+        {
+          "symbol": "301488.SZ",
+          "name": "豪恩汽电",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "智驾感知"
+        },
+        {
+          "symbol": "301221.SZ",
+          "name": "光庭信息",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "汽车软件"
+        },
+        {
+          "symbol": "688667.SH",
+          "name": "菱电电控",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "电控系统"
+        },
+        {
+          "symbol": "002813.SZ",
+          "name": "路畅科技",
+          "node_id": "smart",
+          "role": "downstream",
+          "note": "智能座舱"
+        }
+      ]
+    },
+    {
+      "id": "copper",
+      "name": "铜下游",
+      "short": "铜下游",
+      "description": "铜矿/冶炼 → 铜加工 → 电缆 → 电网与终端；铜价上行时看加工费与订单，铜价下行时看库存与需求。",
+      "valuation_basis": "pb",
+      "kpis": [
+        {
+          "name": "沪铜主力合约",
+          "unit": "元/吨",
+          "freq": "日",
+          "source": "上期所"
+        },
+        {
+          "name": "铜杆开工率",
+          "unit": "%",
+          "freq": "周",
+          "source": "SMM"
+        },
+        {
+          "name": "电网投资完成额",
+          "unit": "亿元",
+          "freq": "月",
+          "source": "能源局"
+        },
+        {
+          "name": "房屋竣工面积",
+          "unit": "同比%",
+          "freq": "月",
+          "source": "统计局"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "raw",
+          "name": "铜矿 / 冶炼",
+          "role": "upstream",
+          "description": "铜精矿与电解铜，铜价与加工费是源头变量",
+          "sort": 1
+        },
+        {
+          "id": "processing",
+          "name": "铜加工",
+          "role": "midstream",
+          "description": "铜管、铜杆、板带与合金，加工费与库存周期",
+          "sort": 2
+        },
+        {
+          "id": "cable",
+          "name": "电缆",
+          "role": "midstream",
+          "description": "电力电缆与特种电缆，订单与铜价传导",
+          "sort": 3
+        },
+        {
+          "id": "grid",
+          "name": "电网 / 终端",
+          "role": "downstream",
+          "description": "电网设备、通信与终端应用，需求决定弹性",
+          "sort": 4
+        }
+      ],
+      "instruments": [
+        {
+          "symbol": "601899.SH",
+          "name": "紫金矿业",
+          "node_id": "raw",
+          "role": "upstream"
+        },
+        {
+          "symbol": "600362.SH",
+          "name": "江西铜业",
+          "node_id": "raw",
+          "role": "upstream"
+        },
+        {
+          "symbol": "002203.SZ",
+          "name": "海亮股份",
+          "node_id": "processing",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002171.SZ",
+          "name": "楚江新材",
+          "node_id": "processing",
+          "role": "midstream"
+        },
+        {
+          "symbol": "601137.SH",
+          "name": "博威合金",
+          "node_id": "processing",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600577.SH",
+          "name": "精达股份",
+          "node_id": "processing",
+          "role": "midstream"
+        },
+        {
+          "symbol": "601609.SH",
+          "name": "金田股份",
+          "node_id": "processing",
+          "role": "midstream"
+        },
+        {
+          "symbol": "603527.SH",
+          "name": "众源新材",
+          "node_id": "processing",
+          "role": "midstream"
+        },
+        {
+          "symbol": "300697.SZ",
+          "name": "电工合金",
+          "node_id": "processing",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600869.SH",
+          "name": "远东股份",
+          "node_id": "cable",
+          "role": "midstream"
+        },
+        {
+          "symbol": "605222.SH",
+          "name": "起帆电缆",
+          "node_id": "cable",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002498.SZ",
+          "name": "汉缆股份",
+          "node_id": "cable",
+          "role": "midstream"
+        },
+        {
+          "symbol": "300933.SZ",
+          "name": "中辰股份",
+          "node_id": "cable",
+          "role": "midstream"
+        },
+        {
+          "symbol": "002276.SZ",
+          "name": "万马股份",
+          "node_id": "cable",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600973.SH",
+          "name": "宝胜股份",
+          "node_id": "cable",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600487.SH",
+          "name": "亨通光电",
+          "node_id": "grid",
+          "role": "downstream"
+        },
+        {
+          "symbol": "600522.SH",
+          "name": "中天科技",
+          "node_id": "grid",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002028.SZ",
+          "name": "思源电气",
+          "node_id": "grid",
+          "role": "downstream"
+        },
+        {
+          "symbol": "000400.SZ",
+          "name": "许继电气",
+          "node_id": "grid",
+          "role": "downstream"
+        },
+        {
+          "symbol": "600312.SH",
+          "name": "平高电气",
+          "node_id": "grid",
+          "role": "downstream"
+        },
+        {
+          "symbol": "603993.SH",
+          "name": "洛阳钼业",
+          "node_id": "raw",
+          "role": "upstream",
+          "note": "铜钴矿"
+        },
+        {
+          "symbol": "000630.SZ",
+          "name": "铜陵有色",
+          "node_id": "raw",
+          "role": "upstream",
+          "note": "冶炼/铜箔"
+        },
+        {
+          "symbol": "000878.SZ",
+          "name": "云南铜业",
+          "node_id": "raw",
+          "role": "upstream",
+          "note": "冶炼"
+        },
+        {
+          "symbol": "600110.SH",
+          "name": "诺德股份",
+          "node_id": "processing",
+          "role": "midstream",
+          "note": "铜箔"
+        },
+        {
+          "symbol": "002300.SZ",
+          "name": "太阳电缆",
+          "node_id": "cable",
+          "role": "midstream",
+          "note": "电缆"
+        },
+        {
+          "symbol": "002491.SZ",
+          "name": "通鼎互联",
+          "node_id": "cable",
+          "role": "midstream",
+          "note": "通信电缆"
+        },
+        {
+          "symbol": "600406.SH",
+          "name": "国电南瑞",
+          "node_id": "grid",
+          "role": "downstream",
+          "note": "电网自动化"
+        },
+        {
+          "symbol": "601126.SH",
+          "name": "四方股份",
+          "node_id": "grid",
+          "role": "downstream",
+          "note": "继电保护"
+        },
+        {
+          "symbol": "601567.SH",
+          "name": "三星医疗",
+          "node_id": "grid",
+          "role": "downstream",
+          "note": "智能电表/医疗"
+        },
+        {
+          "symbol": "688100.SH",
+          "name": "威胜信息",
+          "node_id": "grid",
+          "role": "downstream",
+          "note": "智能电表/物联网"
+        },
+        {
+          "symbol": "601168.SH",
+          "name": "西部矿业",
+          "node_id": "raw",
+          "role": "upstream",
+          "note": "铜矿"
+        },
+        {
+          "symbol": "000737.SZ",
+          "name": "北方铜业",
+          "node_id": "raw",
+          "role": "upstream",
+          "note": "铜矿/冶炼"
+        },
+        {
+          "symbol": "601212.SH",
+          "name": "白银有色",
+          "node_id": "raw",
+          "role": "upstream",
+          "note": "铜/有色"
+        },
+        {
+          "symbol": "002295.SZ",
+          "name": "精艺股份",
+          "node_id": "processing",
+          "role": "midstream",
+          "note": "铜加工"
+        },
+        {
+          "symbol": "301217.SZ",
+          "name": "铜冠铜箔",
+          "node_id": "processing",
+          "role": "midstream",
+          "note": "铜箔"
+        },
+        {
+          "symbol": "002882.SZ",
+          "name": "金龙羽",
+          "node_id": "cable",
+          "role": "midstream",
+          "note": "电缆"
+        },
+        {
+          "symbol": "301082.SZ",
+          "name": "久盛电气",
+          "node_id": "cable",
+          "role": "midstream",
+          "note": "特种电缆"
+        },
+        {
+          "symbol": "002879.SZ",
+          "name": "长缆科技",
+          "node_id": "cable",
+          "role": "midstream",
+          "note": "电缆附件"
+        },
+        {
+          "symbol": "002090.SZ",
+          "name": "金智科技",
+          "node_id": "grid",
+          "role": "downstream",
+          "note": "电网自动化"
+        },
+        {
+          "symbol": "000682.SZ",
+          "name": "东方电子",
+          "node_id": "grid",
+          "role": "downstream",
+          "note": "电网自动化"
+        }
+      ]
+    },
+    {
+      "id": "tourism",
+      "name": "酒店旅游",
+      "short": "酒店旅游",
+      "description": "酒店运营 → 景区目的地 → 旅游服务/免税；客流、RevPAR 与出行政策是核心变量。",
+      "valuation_basis": "pe",
+      "kpis": [
+        {
+          "name": "酒店 RevPAR",
+          "unit": "元",
+          "freq": "月",
+          "source": "STR"
+        },
+        {
+          "name": "民航旅客量",
+          "unit": "万人次",
+          "freq": "月",
+          "source": "民航局"
+        },
+        {
+          "name": "景区客流",
+          "unit": "万人次",
+          "freq": "季",
+          "source": "公司公告"
+        },
+        {
+          "name": "免税销售额",
+          "unit": "亿元",
+          "freq": "月",
+          "source": "海口海关"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "hotel",
+          "name": "酒店运营",
+          "role": "midstream",
+          "description": "连锁酒店与单体酒店，RevPAR 与开店速度",
+          "sort": 1
+        },
+        {
+          "id": "scenic",
+          "name": "景区目的地",
+          "role": "downstream",
+          "description": "自然景区与人文景区，客流与门票/索道弹性",
+          "sort": 2
+        },
+        {
+          "id": "service",
+          "name": "旅游服务 / 免税",
+          "role": "downstream",
+          "description": "OTA、免税、演艺与旅行社，客单价与政策",
+          "sort": 3
+        }
+      ],
+      "instruments": [
+        {
+          "symbol": "600754.SH",
+          "name": "锦江酒店",
+          "node_id": "hotel",
+          "role": "midstream"
+        },
+        {
+          "symbol": "600258.SH",
+          "name": "首旅酒店",
+          "node_id": "hotel",
+          "role": "midstream"
+        },
+        {
+          "symbol": "000428.SZ",
+          "name": "华天酒店",
+          "node_id": "hotel",
+          "role": "midstream"
+        },
+        {
+          "symbol": "301073.SZ",
+          "name": "君亭酒店",
+          "node_id": "hotel",
+          "role": "midstream"
+        },
+        {
+          "symbol": "601007.SH",
+          "name": "金陵饭店",
+          "node_id": "hotel",
+          "role": "midstream"
+        },
+        {
+          "symbol": "000888.SZ",
+          "name": "峨眉山A",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "600054.SH",
+          "name": "黄山旅游",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002033.SZ",
+          "name": "丽江股份",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "603099.SH",
+          "name": "长白山",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "603136.SH",
+          "name": "天目湖",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "603199.SH",
+          "name": "九华旅游",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "000430.SZ",
+          "name": "张家界",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "000978.SZ",
+          "name": "桂林旅游",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002059.SZ",
+          "name": "云南旅游",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "600706.SH",
+          "name": "曲江文旅",
+          "node_id": "scenic",
+          "role": "downstream"
+        },
+        {
+          "symbol": "601888.SH",
+          "name": "中国中免",
+          "node_id": "service",
+          "role": "downstream"
+        },
+        {
+          "symbol": "300144.SZ",
+          "name": "宋城演艺",
+          "node_id": "service",
+          "role": "downstream"
+        },
+        {
+          "symbol": "600138.SH",
+          "name": "中青旅",
+          "node_id": "service",
+          "role": "downstream"
+        },
+        {
+          "symbol": "002707.SZ",
+          "name": "众信旅游",
+          "node_id": "service",
+          "role": "downstream"
+        },
+        {
+          "symbol": "000610.SZ",
+          "name": "西安旅游",
+          "node_id": "service",
+          "role": "downstream"
+        },
+        {
+          "symbol": "605108.SH",
+          "name": "同庆楼",
+          "node_id": "hotel",
+          "role": "midstream",
+          "note": "餐饮/宴会酒店"
+        },
+        {
+          "symbol": "603043.SH",
+          "name": "广州酒家",
+          "node_id": "hotel",
+          "role": "midstream",
+          "note": "餐饮/食品"
+        },
+        {
+          "symbol": "002186.SZ",
+          "name": "全聚德",
+          "node_id": "hotel",
+          "role": "midstream",
+          "note": "餐饮老字号"
+        },
+        {
+          "symbol": "000721.SZ",
+          "name": "西安饮食",
+          "node_id": "hotel",
+          "role": "midstream",
+          "note": "餐饮"
+        },
+        {
+          "symbol": "601111.SH",
+          "name": "中国国航",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "航空出行"
+        },
+        {
+          "symbol": "601021.SH",
+          "name": "春秋航空",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "低成本航空"
+        },
+        {
+          "symbol": "603885.SH",
+          "name": "吉祥航空",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "航空出行"
+        },
+        {
+          "symbol": "600009.SH",
+          "name": "上海机场",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "枢纽机场"
+        },
+        {
+          "symbol": "600004.SH",
+          "name": "白云机场",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "枢纽机场"
+        },
+        {
+          "symbol": "002928.SZ",
+          "name": "华夏航空",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "支线航空"
+        },
+        {
+          "symbol": "001215.SZ",
+          "name": "千味央厨",
+          "node_id": "hotel",
+          "role": "midstream",
+          "note": "餐饮供应链"
+        },
+        {
+          "symbol": "300973.SZ",
+          "name": "立高食品",
+          "node_id": "hotel",
+          "role": "midstream",
+          "note": "烘焙供应链"
+        },
+        {
+          "symbol": "603170.SH",
+          "name": "宝立食品",
+          "node_id": "hotel",
+          "role": "midstream",
+          "note": "餐饮供应链"
+        },
+        {
+          "symbol": "002159.SZ",
+          "name": "三特索道",
+          "node_id": "scenic",
+          "role": "downstream",
+          "note": "景区索道"
+        },
+        {
+          "symbol": "600593.SH",
+          "name": "大连圣亚",
+          "node_id": "scenic",
+          "role": "downstream",
+          "note": "海洋公园"
+        },
+        {
+          "symbol": "300859.SZ",
+          "name": "西域旅游",
+          "node_id": "scenic",
+          "role": "downstream",
+          "note": "新疆景区"
+        },
+        {
+          "symbol": "600115.SH",
+          "name": "中国东航",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "航空"
+        },
+        {
+          "symbol": "600029.SH",
+          "name": "南方航空",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "航空"
+        },
+        {
+          "symbol": "600515.SH",
+          "name": "海南机场",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "机场/免税"
+        },
+        {
+          "symbol": "000089.SZ",
+          "name": "深圳机场",
+          "node_id": "service",
+          "role": "downstream",
+          "note": "机场"
+        }
+      ]
+    }
+  ]
+}

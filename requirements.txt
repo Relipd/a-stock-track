@@ -1,0 +1,16 @@
+# 核心运行时依赖（Python 3.14 / Windows 实测）
+# 安装：.venv\Scripts\python.exe -m pip install -r requirements.txt
+pandas==3.0.6
+numpy==2.5.4
+pyarrow==26.0.0
+fastapi==0.143.3
+uvicorn[standard]==0.54.0
+pydantic==2.14.1
+akshare==1.19.1
+
+# 测试
+pytest==9.1.1
+httpx==0.28.1
+
+# 可选：端到端 UI 验证（scripts/e2e_check.py，复用本机 Edge，无需下载浏览器）
+# playwright==1.64.0

@@ -1,0 +1,15 @@
+# 运行时/环境
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.taste-skill/
+_skills/diagram-design/
+data/*.log
+data/*.sqlite-shm
+data/*.sqlite-wal
+data/backups/
+
+# 数据文件刻意纳入版本库：
+# - data/*.parquet：行情/财务/估值/主营/宏观数据源
+# - data/*.sqlite：state.sqlite（决策/星标/逻辑）与 cache.sqlite

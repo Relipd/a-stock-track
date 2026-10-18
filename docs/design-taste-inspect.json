@@ -1,0 +1,1601 @@
+{
+ "url": "http://127.0.0.1:8000/#/chain",
+ "at": "2026-10-18T03:16:32.514Z",
+ "allow": [
+  "eyebrow",
+  "hairline",
+  "few-pictures",
+  "still-page",
+  "empty-screens",
+  "no-footage"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.39,
+    0.06,
+    0.19,
+    0.16
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 3,
+    "transitions": 2,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2999,
+     "screens": 3.3,
+     "words": 523,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 1,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "白色家电产业链",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 48,
+     "vw": 3.3,
+     "font": "STIX Two Text",
+     "weight": 400,
+     "tracking": -0.022,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.55,
+     "top": 147,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "白色家电产业链",
+     "words": 1,
+     "lines": 1,
+     "size": 48,
+     "font": "STIX Two Text"
+    },
+    "headings": [
+     {
+      "text": "白色家电产业链",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.022,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.55,
+      "top": 147,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "6涨 / 14跌",
+      "words": 3,
+      "chars": 8,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.11,
+      "top": 227,
+      "mixedFonts": [
+       "STIX Two Text",
+       "Segoe UI"
+      ],
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "46%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.11,
+      "top": 227,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5高 / 7低",
+      "words": 3,
+      "chars": 7,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.11,
+      "top": 227,
+      "mixedFonts": [
+       "STIX Two Text",
+       "Segoe UI"
+      ],
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "26.2%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.5,
+      "top": 2511,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "46%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2647,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "78 天",
+      "words": 2,
+      "chars": 4,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2647,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "6 涨 / 14 跌",
+      "words": 5,
+      "chars": 10,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2774,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "-4.0pp",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2774,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 8,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 2
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Segoe UI",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "STIX Two Text",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      20,
+      22,
+      28,
+      32,
+      36,
+      48
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": null,
+     "measureChars": null,
+     "max": {
+      "size": 48,
+      "vw": 3.3,
+      "font": "STIX Two Text",
+      "text": "白色家电产业链"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.25,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "20 日涨跌",
+      "above": "6涨 / 14跌",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 200
+     },
+     {
+      "text": "PE 分位中位",
+      "above": "46%",
+      "upper": true,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 200
+     },
+     {
+      "text": "极端估值",
+      "above": "5高 / 7低",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 200
+     },
+     {
+      "text": "整机毛利率中位",
+      "above": "26.2%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2484
+     },
+     {
+      "text": "估值分位中位",
+      "above": "46%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2620
+     },
+     {
+      "text": "库存周转天数",
+      "above": "78 天",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2620
+     },
+     {
+      "text": "20 日涨跌",
+      "above": "6 涨 / 14 跌",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2746
+     },
+     {
+      "text": "上游 − 整机 20 日",
+      "above": "-4.0pp",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2746
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#e6e4df",
+     "bodyBgHsl": {
+      "h": 43,
+      "s": 0.12,
+      "l": 0.89
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#5f5d55",
+       "share": 0.46
+      },
+      {
+       "color": "#26251e",
+       "share": 0.35
+      },
+      {
+       "color": "#2f6b4f",
+       "share": 0.12
+      },
+      {
+       "color": "#a33a2b",
+       "share": 0.06
+      },
+      {
+       "color": "#e6e4df",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#26251e",
+      "hsl": {
+       "h": 53,
+       "s": 0.12,
+       "l": 0.13
+      },
+      "fg": "#e6e4df"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 4,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "跳到主要内容"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 12,
+     "hairlineSamples": [
+      "header.masthead 1440px",
+      "li.read 720px",
+      "li.read 342px",
+      "li.read 342px",
+      "li.read 342px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "stix two text"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 1280,
+   "height": 800,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.5,
+    0.16,
+    0.19,
+    0.24
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 3,
+    "transitions": 2,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1280,
+     "h": 800
+    },
+    "page": {
+     "height": 2917,
+     "screens": 3.6,
+     "words": 523,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 1,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "白色家电产业链",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 48,
+     "vw": 3.8,
+     "font": "STIX Two Text",
+     "weight": 400,
+     "tracking": -0.022,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.55,
+     "top": 142,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "白色家电产业链",
+     "words": 1,
+     "lines": 1,
+     "size": 48,
+     "font": "STIX Two Text"
+    },
+    "headings": [
+     {
+      "text": "白色家电产业链",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.8,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.022,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.55,
+      "top": 142,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "6涨 / 14跌",
+      "words": 3,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.7,
+      "vw": 2.4,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.11,
+      "top": 224,
+      "mixedFonts": [
+       "STIX Two Text",
+       "Segoe UI"
+      ],
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "46%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 30.7,
+      "vw": 2.4,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.11,
+      "top": 224,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5高 / 7低",
+      "words": 3,
+      "chars": 7,
+      "lines": 1,
+      "size": 30.7,
+      "vw": 2.4,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.11,
+      "top": 224,
+      "mixedFonts": [
+       "STIX Two Text",
+       "Segoe UI"
+      ],
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "26.2%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.8,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.5,
+      "top": 2439,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "46%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 28,
+      "vw": 2.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2575,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "78 天",
+      "words": 2,
+      "chars": 4,
+      "lines": 1,
+      "size": 28,
+      "vw": 2.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2575,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "6 涨 / 14 跌",
+      "words": 5,
+      "chars": 10,
+      "lines": 1,
+      "size": 28,
+      "vw": 2.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2702,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "-4.0pp",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 28,
+      "vw": 2.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2702,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 8,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 2
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Segoe UI",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "STIX Two Text",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      20,
+      22,
+      28,
+      31,
+      36,
+      48
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": null,
+     "measureChars": null,
+     "max": {
+      "size": 48,
+      "vw": 3.8,
+      "font": "STIX Two Text",
+      "text": "白色家电产业链"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.25,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "20 日涨跌",
+      "above": "6涨 / 14跌",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 196
+     },
+     {
+      "text": "PE 分位中位",
+      "above": "46%",
+      "upper": true,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 196
+     },
+     {
+      "text": "极端估值",
+      "above": "5高 / 7低",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 196
+     },
+     {
+      "text": "整机毛利率中位",
+      "above": "26.2%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2412
+     },
+     {
+      "text": "估值分位中位",
+      "above": "46%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2548
+     },
+     {
+      "text": "库存周转天数",
+      "above": "78 天",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2548
+     },
+     {
+      "text": "20 日涨跌",
+      "above": "6 涨 / 14 跌",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2674
+     },
+     {
+      "text": "上游 − 整机 20 日",
+      "above": "-4.0pp",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2674
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#e6e4df",
+     "bodyBgHsl": {
+      "h": 43,
+      "s": 0.12,
+      "l": 0.89
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#5f5d55",
+       "share": 0.46
+      },
+      {
+       "color": "#26251e",
+       "share": 0.35
+      },
+      {
+       "color": "#2f6b4f",
+       "share": 0.12
+      },
+      {
+       "color": "#a33a2b",
+       "share": 0.06
+      },
+      {
+       "color": "#e6e4df",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#26251e",
+      "hsl": {
+       "h": 53,
+       "s": 0.12,
+       "l": 0.13
+      },
+      "fg": "#e6e4df"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 4,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "跳到主要内容"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 12,
+     "hairlineSamples": [
+      "header.masthead 1280px",
+      "li.read 640px",
+      "li.read 302px",
+      "li.read 302px",
+      "li.read 302px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "stix two text"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.65,
+    0.29,
+    0.15,
+    0.15
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 3,
+    "transitions": 2,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3682,
+     "screens": 3.6,
+     "words": 432,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 1,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "白色家电产业链",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 40,
+     "vw": 5.2,
+     "font": "STIX Two Text",
+     "weight": 400,
+     "tracking": -0.022,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 117,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "白色家电产业链",
+     "words": 1,
+     "lines": 1,
+     "size": 40,
+     "font": "STIX Two Text"
+    },
+    "headings": [
+     {
+      "text": "白色家电产业链",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.022,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 117,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "6涨 / 14跌",
+      "words": 3,
+      "chars": 8,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 285,
+      "mixedFonts": [
+       "STIX Two Text",
+       "Segoe UI"
+      ],
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "46%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.3,
+      "top": 285,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5高 / 7低",
+      "words": 3,
+      "chars": 7,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.3,
+      "top": 285,
+      "mixedFonts": [
+       "STIX Two Text",
+       "Segoe UI"
+      ],
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "26.2%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2664,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "46%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2790,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "78 天",
+      "words": 2,
+      "chars": 4,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2917,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "6 涨 / 14 跌",
+      "words": 5,
+      "chars": 10,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 3044,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "-4.0pp",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "STIX Two Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 3171,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 8,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 2
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Segoe UI",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "STIX Two Text",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      18,
+      22,
+      26,
+      28,
+      40
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": null,
+     "measureChars": null,
+     "max": {
+      "size": 40,
+      "vw": 5.2,
+      "font": "STIX Two Text",
+      "text": "白色家电产业链"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.31,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "20 日涨跌",
+      "above": "6涨 / 14跌",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 257
+     },
+     {
+      "text": "PE 分位中位",
+      "above": "46%",
+      "upper": true,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 257
+     },
+     {
+      "text": "极端估值",
+      "above": "5高 / 7低",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 257
+     },
+     {
+      "text": "整机毛利率中位",
+      "above": "26.2%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2636
+     },
+     {
+      "text": "估值分位中位",
+      "above": "46%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2763
+     },
+     {
+      "text": "库存周转天数",
+      "above": "78 天",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2890
+     },
+     {
+      "text": "20 日涨跌",
+      "above": "6 涨 / 14 跌",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 3017
+     },
+     {
+      "text": "上游 − 整机 20 日",
+      "above": "-4.0pp",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 3143
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#e6e4df",
+     "bodyBgHsl": {
+      "h": 43,
+      "s": 0.12,
+      "l": 0.89
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#5f5d55",
+       "share": 0.56
+      },
+      {
+       "color": "#26251e",
+       "share": 0.28
+      },
+      {
+       "color": "#2f6b4f",
+       "share": 0.1
+      },
+      {
+       "color": "#a33a2b",
+       "share": 0.05
+      },
+      {
+       "color": "#e6e4df",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#26251e",
+      "hsl": {
+       "h": 53,
+       "s": 0.12,
+       "l": 0.13
+      },
+      "fg": "#e6e4df"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 4,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "跳到主要内容"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 12,
+     "hairlineSamples": [
+      "header.masthead 768px",
+      "li.read 728px",
+      "li.read 728px",
+      "li.read 728px",
+      "li.read 728px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.47
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": true,
+     "height": 57,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "stix two text"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "mixed-font-headline",
+   "width": 1440,
+   "message": "2 headline(s) switch typeface or to italic mid-line (the \"one italic serif word\" move).",
+   "fix": "Set the whole headline in one face. Emphasis comes from the words.",
+   "alsoAt": [
+    1280,
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "10 different font sizes (13, 14, 15, 17, 20, 22, 28, 32, 36, 48).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    1280
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "D:\\股市\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "D:\\股市\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "desktop",
+   "width": 1280,
+   "fold": "D:\\股市\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "D:\\股市\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "D:\\股市\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "D:\\股市\\.taste-skill\\inspect\\tablet-page-01.jpg"
+   ]
+  }
+ ]
+}
